@@ -11,7 +11,7 @@ class BasketLine
     {
         this.id = parseInt(id, 10)
         this.name = name
-        this.price = parseFloat(price).toFixed(2)
+        this.price = parseFloat(price)
     }
     
     addProductCount()
@@ -26,7 +26,7 @@ class BasketLine
         element.innerHTML = `
             <div>${this.name}</div>
             <div>${this.count}</div>
-            <div>${this.price}</div>
+            <div>${this.price.toFixed(2)}</div>
             <div>${parseFloat(this.price * this.count).toFixed(2)}</div>
         `
         
